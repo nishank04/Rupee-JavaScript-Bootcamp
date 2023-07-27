@@ -176,3 +176,69 @@ const bill = 430;
 const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
 */
+
+
+///Error handling
+/* try catch block syntax is used for error handling.
+try {
+    ///code...
+} catch (err) {
+    ///error handling
+}
+flow of error handling
+1. code is first executred in try block
+2. If there were no errors then catch (err) is ignored.
+3. If error occurs it stops executing try block and switches to catch block
+
+eg: try{
+    alert ('test try')
+    ///code
+    alert ('try block execution ends)
+} catch (err) {
+    alert('no error came')
+    code////....
+}
+Try catch only works for runtime errors
+Try...catch works synchronously
+
+///callbacks
+eg: function loadData(src, callback) {
+    let script = document.createElement('script');
+    script.onload() = () =>callback(scipt);
+    document.head.append(script)
+}
+
+loadData('w3schools.com', function(){
+    //callback will runs after the script is loaded
+    newfnction()
+})
+promise syntax
+let promise = new promise(function(resolve, reject){
+    kjlkjlkjl...
+})
+
+promise chaining
+
+new promise(function(resolve, reject){
+    setTimeout(() => resolve(1), 1000);
+}).then(function(result){
+    return result *2
+}).then(function(result){
+    return result *2
+}).then(function(result){
+    return result *2
+})
+
+///Async /  Await
+
+async function f() {
+    let promise = new Promise((resolve, reject) => {
+        .....
+    })
+    let result = await promise
+}
+
+f()
+
+await can't be used in normal function, in arrow functions only */
+
